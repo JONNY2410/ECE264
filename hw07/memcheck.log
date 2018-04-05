@@ -1,0 +1,105 @@
+==27757== Memcheck, a memory error detector
+==27757== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==27757== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==27757== Command: ./test_shuffle
+==27757== Parent PID: 27407
+==27757== 
+==27757== Invalid write of size 1
+==27757==    at 0x400813: divide (shuffle.c:16)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e041 is 0 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B58: shuffle (shuffle.c:74)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid write of size 1
+==27757==    at 0x400820: divide (shuffle.c:17)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e091 is 0 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B73: shuffle (shuffle.c:78)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid write of size 4
+==27757==    at 0x400859: divide (shuffle.c:21)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e054 is 19 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B58: shuffle (shuffle.c:74)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid write of size 4
+==27757==    at 0x400896: divide (shuffle.c:28)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e0a4 is 19 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B73: shuffle (shuffle.c:78)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid read of size 8
+==27757==    at 0x4008B7: divide (shuffle.c:32)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e090 is 0 bytes inside a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B73: shuffle (shuffle.c:78)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid read of size 8
+==27757==    at 0x4008BD: divide (shuffle.c:32)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e098 is 7 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B73: shuffle (shuffle.c:78)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid read of size 8
+==27757==    at 0x4008C5: divide (shuffle.c:32)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e0a0 is 15 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B73: shuffle (shuffle.c:78)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid read of size 8
+==27757==    at 0x4008D8: divide (shuffle.c:32)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e040 is 0 bytes inside a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B58: shuffle (shuffle.c:74)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid read of size 8
+==27757==    at 0x4008DE: divide (shuffle.c:32)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e048 is 7 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B58: shuffle (shuffle.c:74)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== Invalid read of size 8
+==27757==    at 0x4008E6: divide (shuffle.c:32)
+==27757==    by 0x400B97: shuffle (shuffle.c:82)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757==  Address 0x4c3e050 is 15 bytes after a block of size 1 alloc'd
+==27757==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27757==    by 0x400B58: shuffle (shuffle.c:74)
+==27757==    by 0x400709: main (test_shuffle.c:21)
+==27757== 
+==27757== 
+==27757== HEAP SUMMARY:
+==27757==     in use at exit: 0 bytes in 0 blocks
+==27757==   total heap usage: 24 allocs, 24 frees, 156 bytes allocated
+==27757== 
+==27757== All heap blocks were freed -- no leaks are possible
+==27757== 
+==27757== For counts of detected and suppressed errors, rerun with: -v
+==27757== ERROR SUMMARY: 1252 errors from 10 contexts (suppressed: 8 from 6)

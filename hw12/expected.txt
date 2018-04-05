@@ -1,0 +1,5 @@
+en_queue list: 0->0->1->2->3->4->10->14->15->NULL
+stack pop: 0->NULL
+dequeue: 0->NULL
+remove last node: 15->NULL
+stack push: 14->1->2->3->4->10->14->NULL

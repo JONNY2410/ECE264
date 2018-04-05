@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include"huffman.h"
+
+int cmp_int(const void* value1, const void* value2){
+	int a = *(const int *)(value1);
+	int b = *(const int *)(value2);	
+	return a-b;	
+}
+
+static void print_fn(const void* ptr){
+	printf("%d",*(const int*)ptr);
+}
+
+void destroy_fn(void* point ){
+	return;
+}
+
+int main(int argc, char* argv[]){
+	int array[5] = {1,2,4,5,6};
+	int object = 3;
+	const void* new_object = &object;
+
+	Node* l_list = malloc(sizeof(*l_list));
+	Node* head = l_list;
+	for(int i=0; i<4; i++){
+		l_list->ptr = (void*)(array+i);
+		if(i!=3){
+			l_list->next = malloc(sizeof(l_list->next));
+			l_list = l_list->next;
+		}
+		else{
+			l_list->next = NULL;	
+		}
+	}
+	printf("original linked list: ");
+	print_node(head,print_fn);
+
+	Node* n_head = pq_enqueue(&head, new_object, cmp_int);
+	printf("enqueue list: ");	
+	print_node(n_head,print_fn);
+
+
+	printf("stack pop: ");
+	Node* s_node = stack_pop(&head);
+	print_node(s_node,print_fn);
+	
+	printf("dequeue: ");
+	Node* d_node = pq_dequeue(&head);
+	print_node(d_node,print_fn);
+
+	Node* l_node = remove_last_node(&head);
+	printf("remove last node: ");
+	print_node(l_node,print_fn);
+
+	print_node(head,print_fn);	
+
+//	Node* l_node = remove_last_node(&head);
+//	printf("remove last node: ");
+
+	return EXIT_SUCCESS;
+}

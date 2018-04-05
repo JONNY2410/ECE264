@@ -1,0 +1,15 @@
+Does the code work?
+print 1, 1024 
+ok, looks decimal works, how about hex 0x400
+how about binary, int_min: -0x80000000
+int_max 0x7fffffff
+int_min in binary: -0b10000000000000000000000000000000
+good, good, let's try some double, my favorite double is -$2147483648.98
+great, other double like $2147483647.99
+some strings maybe? : Jonny is a cool kid
+characters? : Y
+end with %
+
+
+
+
